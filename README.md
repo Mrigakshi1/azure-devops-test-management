@@ -657,25 +657,6 @@ The defect was tracked through the Jira workflow to demonstrate defect lifecycle
 - Agile Issue Management
 - Kanban Workflow
 
-# Jira Bug Details
-
-Detailed bug information was maintained.
-
-## Information Recorded
-
-* Summary
-* Description
-* Environment
-* Steps to Reproduce
-* Expected Result
-* Actual Result
-* Priority
-* Severity
-* Status
-
-## Screenshot
-
-![Jira Bug Details](screenshots/14-jira-bug-details.png)
 
 ---
 
