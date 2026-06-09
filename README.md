@@ -40,45 +40,7 @@ This project was created to demonstrate practical experience in:
 
 ---
 
-# Project Structure
 
-```text
-azure-devops-test-management/
-│
-├── README.md
-│
-├── Documentation/
-│   ├── Azure_DevOps_Testing_Guide.pdf
-│   ├── Jira_Defect_Management_Guide.pdf
-│
-├── Test-Cases/
-│   ├── Login_Test_Cases.xlsx
-│   ├── API_Test_Cases.xlsx
-│
-├── Defect-Reports/
-│   ├── Azure_DevOps_Bug_Report.xlsx
-│   ├── Jira_Bug_Report.xlsx
-│
-└── screenshots/
-    ├── 01-project-created.png
-    ├── 02-test-plan-created.png
-    ├── 03-test-suite-created.png
-    ├── 04-test-case-created.png
-    ├── 05-test-run-created.png
-    ├── 06-test-results.png
-    ├── 07-devops-bug-created.png
-    ├── 08-devops-bug-details.png
-    ├── 09-user-story-created.png
-    ├── 10-traceability-matrix.png
-    ├── 11-jira-project-created.png
-    ├── 12-jira-backlog.png
-    ├── 13-jira-bug-created.png
-    ├── 14-jira-bug-details.png
-    ├── 15-jira-board.png
-    ├── 16-jira-workflow.png
-```
-
----
 
 # Azure DevOps Project Setup
 
