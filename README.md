@@ -103,6 +103,8 @@ A dedicated Azure DevOps project was created to manage testing activities.
 ## Screenshot
 
 ![Azure DevOps Project](screenshots/01-project-created.png)
+![Azure DevOps Project](screenshots/01-project-created1.png)
+![Azure DevOps Project](screenshots/01-project-created2.png)
 
 ---
 
