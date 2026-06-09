@@ -599,44 +599,63 @@ The defect was tracked through the Jira workflow to demonstrate defect lifecycle
 
 ![Jira Bug](screenshots/15-jira-bug-lifecycle.png)
 
+## Jira Defect Creation
 
-## Sample Jira Defect
+Defects were created and tracked through their lifecycle using Jira Software.
 
-### Bug ID
+### Sample Jira Defect
 
-```text
-BUG-101
-```
+| Field | Value |
+|---------|---------|
+| Bug ID | KAN-7 |
+| Title | User creation API accepts invalid job title format |
+| Priority | High |
+| Severity | Medium |
+| Status | Done |
 
-### Title
+### Defect Description
 
-```text
-Login button not responding
-```
+During API testing, an invalid job title format was submitted to the Create User endpoint.
 
-### Priority
+**Expected Result**
 
-```text
-Highest
-```
+The API should validate the job field and reject invalid formats.
 
-### Severity
+**Actual Result**
 
-```text
-High
-```
+The API accepted the invalid job title value and returned HTTP 201 Created.
 
-### Status
+### Defect Lifecycle
 
-```text
 Open
-```
 
-## Screenshot
+↓
 
-![Jira Bug](screenshots/13-jira-bug-created.png)
+In Progress
 
----
+↓
+
+In Review
+
+↓
+
+Done
+
+### Outcome
+
+The defect was tracked through the Jira workflow to demonstrate defect lifecycle management, issue prioritization, and Agile defect tracking practices.
+
+### Screenshot
+
+![Jira Bug](screenshots/15-jira-bug-details.png)
+
+### Key Learning
+
+- Jira Defect Management
+- Bug Prioritization
+- Defect Lifecycle Tracking
+- Agile Issue Management
+- Kanban Workflow
 
 # Jira Bug Details
 
