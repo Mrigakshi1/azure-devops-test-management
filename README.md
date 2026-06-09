@@ -444,36 +444,69 @@ This ensures that business requirements can be traced to test cases and validati
 
 ---
 
-# Requirement Traceability
+## Requirement Traceability
 
-Requirements were linked to test cases and defects.
+Requirements were linked to test cases and defects to ensure complete validation coverage and quality assurance.
 
-## Traceability Flow
+### Traceability Flow
 
-```text
 User Story
-      ↓
+↓
 Test Case
-      ↓
+↓
 Test Run
-      ↓
+↓
 Bug
-      ↓
+↓
 Retest
-      ↓
+↓
 Closed
-```
 
-## Benefits
+### Example
+
+**User Story**
+As an API consumer,
+I want to authenticate successfully,
+so that I can access protected resources.
+
+**Associated Test Cases**
+
+* Verify successful login
+* Verify invalid credentials
+* Verify user creation
+
+**Associated Defect**
+
+* User creation API accepts invalid job title format
+
+### Benefits
 
 * Requirement coverage
 * Audit readiness
 * Impact analysis
 * Better quality assurance
+* End-to-end traceability
+
+### Screenshots
+
+* User Story Traceability
+* Test Run Results
+* Defect Linked to Test Case
+
 
 ## Screenshot
 
+Screenshot A
+User Story showing related tasks.
 ![Traceability Matrix](screenshots/10-traceability-matrix.png)
+
+Screenshot B
+Test Run showing Pass/Fail results.
+![Traceability Matrix](screenshots/12-test-run-results.png)
+
+Screenshot C
+Bug showing linked Test Case.
+![Traceability Matrix](screenshots/13-bug-linked-to-testcase.png)
 
 ---
 
