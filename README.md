@@ -353,49 +353,25 @@ The API correctly rejected invalid credentials and returned an appropriate error
 ---
 # Azure DevOps Defect Tracking
 
+Sample defect created to demonstrate Azure DevOps defect management workflow.
+
+During user creation API validation, an invalid job title format was submitted.
+
+Impact:
+Invalid user data may be stored in the system.
+
 Defects identified during testing were logged in Azure Boards.
 
-## Sample Bug
+Severity: Medium
 
-### Bug ID
+Sample defect created to demonstrate Azure DevOps defect management workflow.
 
-```text
-BUG001
-```
+Expected Result:
+The API should validate the job title field and reject invalid formats.
 
-### Title
 
-```text
-Login button not responding
-```
-
-### Severity
-
-```text
-High
-```
-
-### Priority
-
-```text
-High
-```
-
-### Steps to Reproduce
-
-1. Open Login Page
-2. Enter credentials
-3. Click Login
-
-### Expected Result
-
-User successfully logs in.
-
-### Actual Result
-
-No action occurs.
-
-## Screenshot
+Actual Result:
+The API accepts invalid job title values and creates the user successfully.
 
 ![Azure DevOps Bug](screenshots/07-devops-bug-created.png)
 
