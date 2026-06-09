@@ -549,7 +549,56 @@ The Jira backlog was used to manage testing-related activities.
 
 # Jira Defect Creation
 
-Defects were created and tracked through their lifecycle.
+## Jira Defect Creation
+
+Defects were created and tracked through their lifecycle using Jira Software.
+
+### Sample Jira Defect
+
+| Field    | Value                                              |
+| -------- | -------------------------------------------------- |
+| Bug ID   | KAN-7                                              |
+| Title    | User creation API accepts invalid job title format |
+| Priority | High                                               |
+| Severity | Medium                                             |
+| Status   | Done                                               |
+
+### Defect Description
+
+During API testing, an invalid job title format was submitted to the Create User endpoint.
+
+**Expected Result**
+
+The API should validate the job field and reject invalid formats.
+
+**Actual Result**
+
+The API accepted the invalid job title value and returned HTTP 201 Created.
+
+### Defect Lifecycle
+
+Open
+
+↓
+
+In Progress
+
+↓
+
+In Review
+
+↓
+
+Done
+
+### Outcome
+
+The defect was tracked through the Jira workflow to demonstrate defect lifecycle management and Agile defect tracking practices.
+
+### Screenshot
+
+![Jira Bug](screenshots/15-jira-bug-lifecycle.png)
+
 
 ## Sample Jira Defect
 
