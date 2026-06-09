@@ -222,7 +222,7 @@ Pass
 
 ## Screenshot
 
-![Test Case](screenshots/04-test-case-created.png)
+![Test Case](screenshots/04-test-case-created-test01.png)
 
 ---
 
