@@ -103,8 +103,39 @@ A dedicated Azure DevOps project was created to manage testing activities.
 ## Screenshot
 
 ![Azure DevOps Project](screenshots/01-project-created.png)
+
+### Configured Azure Boards
+
+- Created Epic, Feature, User Story and Tasks
+- Established parent-child relationships
+- Demonstrated Agile backlog management
+- Implemented requirement traceability
+
+Epic
+└── Feature
+     └── User Story
+          ├── Design Test Cases
+          ├── Execute Tests
+          ├── Log Defects
+          └── Retest Fixed Defects
+          
 ![Azure DevOps Project](screenshots/02-agile-hierarchy.png)
-![Azure DevOps Project](screenshots/01-project-created2.png)
+
+### User Story Breakdown
+
+A User Story was created and decomposed into testing-related tasks to support Agile planning and execution.
+
+Tasks created:
+
+- Design Authentication Test Cases
+- Execute Authentication Tests
+- Log Authentication Defects
+- Retest Fixed Defects
+
+This demonstrates Agile work breakdown, task management, and requirement traceability within Azure Boards.
+
+![Azure DevOps Project](screenshots/03-user-story-tasks.png)
+![Azure DevOps Project](screenshots/04-userstory-task-traceability.png)
 
 ---
 
