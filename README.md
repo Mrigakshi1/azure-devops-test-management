@@ -403,29 +403,44 @@ Note: The defect was created for demonstration purposes to showcase Azure DevOps
 
 ---
 
-# Azure Boards Integration
+## Azure Boards Integration
 
-User Stories were created and linked with testing activities.
+User Stories were created and linked with testing activities to establish requirement traceability.
 
-## User Story Example
+### User Story Example
 
-### Title
-
-```text
+**Title**
 User Login Functionality
-```
 
-### Description
+**Description**
 
-As a user,
+As an API consumer,
 
-I want to log into the application
+I want to authenticate successfully
 
-So that I can access my account securely.
+So that I can access protected resources securely.
 
-## Screenshot
+### Testing Traceability
 
-![User Story](screenshots/09-user-story-created.png)
+The User Story was linked to:
+
+* Verify successful login
+* Verify invalid credentials
+* Verify user creation
+
+This ensures that business requirements can be traced to test cases and validation activities.
+
+### Screenshot
+
+![User Story Traceability](screenshots/10-user-story-traceability.png)
+
+### Key Learning
+
+* Azure Boards Work Item Management
+* Requirement Traceability
+* User Story to Test Case Mapping
+* Agile Testing Practices
+
 
 ---
 
