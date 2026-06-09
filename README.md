@@ -360,18 +360,20 @@ During user creation API validation, an invalid job title format was submitted.
 Impact:
 Invalid user data may be stored in the system.
 
-Defects identified during testing were logged in Azure Boards.
+Test executed using Postman.
 
-Severity: Medium
-
-Sample defect created to demonstrate Azure DevOps defect management workflow.
+Invalid job title format was submitted in the Create User API request.
 
 Expected Result:
-The API should validate the job title field and reject invalid formats.
-
+The API should validate the job field and reject invalid formats.
 
 Actual Result:
-The API accepts invalid job title values and creates the user successfully.
+The API accepted the invalid job title and returned HTTP 201 Created.
+
+Outcome:
+FAIL
+
+Bug created to demonstrate Azure DevOps defect tracking and test-to-defect traceability.
 
 ![Azure DevOps Bug](screenshots/07-devops-bug-created.png)
 
