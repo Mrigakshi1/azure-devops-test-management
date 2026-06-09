@@ -397,6 +397,8 @@ Detailed defect information was maintained to support issue resolution.
 
 ![Bug Details](screenshots/08-devops-bug-details.png)
 
+Note: The defect was created for demonstration purposes to showcase Azure DevOps bug tracking, defect lifecycle management, and traceability.
+
 ---
 
 # Azure Boards Integration
