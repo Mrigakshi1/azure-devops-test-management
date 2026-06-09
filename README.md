@@ -472,22 +472,61 @@ Bug showing linked Test Case.
 
 ---
 
-# Jira Defect Management
+## Jira Defect Management
 
-Jira Software was used to demonstrate defect management and Agile workflows.
+Jira Software was used to demonstrate Agile defect management and Kanban-based workflows.
 
-## Activities Performed
+### Activities Performed
 
-* Created Jira Project
-* Managed Backlog
-* Created Bugs
-* Prioritized Defects
-* Managed Bug Lifecycle
-* Used Kanban Board
+* Created Jira workspace
+* Created User Story
+* Managed backlog items
+* Created testing tasks
+* Logged defects
+* Prioritized issues
+* Managed defect lifecycle
+* Used Kanban Board workflow
 
-## Screenshot
+### Workflow Demonstrated
 
-![Jira Project](screenshots/11-jira-project-created.png)
+User Login Functionality (Story)
+
+↓
+
+Design Authentication Test Cases (Task)
+
+↓
+
+Execute Authentication Tests (Task)
+
+↓
+
+User creation API accepts invalid job title format (Bug)
+
+↓
+
+Defect Resolution (Done)
+
+### Sample Defect
+
+**Issue ID:** KAN-7
+
+**Title:** User creation API accepts invalid job title format
+
+**Status:** Done
+
+### Benefits
+
+* Agile work tracking
+* Defect lifecycle management
+* Visual workflow management
+* Team collaboration
+* Requirement traceability
+
+### Screenshot
+
+![Jira Kanban Workflow](screenshots/14-jira-kanban-workflow.png)
+
 
 ---
 
