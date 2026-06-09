@@ -1,36 +1,42 @@
-# Azure DevOps Test Management Portfolio
+# Azure DevOps & Jira Test Management Portfolio
 
-## Project Overview
+## Repository Description
 
-This project demonstrates hands-on experience with Azure DevOps Test Plans, Test Suites, Test Cases, Test Execution, Defect Tracking, and Requirement Traceability.
+This repository demonstrates hands-on experience with Azure DevOps Test Plans, Azure Boards, Jira Defect Management, Test Case Design, Manual Test Execution, Defect Tracking, Agile Testing, and Requirement Traceability.
 
-The objective of this project is to showcase practical software testing and quality assurance activities using Azure DevOps while following industry-standard testing practices aligned with ISTQB principles.
-
----
-
-## Project Objectives
-
-* Create and manage Azure DevOps Test Plans
-* Organize Test Suites
-* Design and maintain Test Cases
-* Execute manual tests
-* Record test results
-* Create and manage defects
-* Demonstrate requirement traceability
-* Showcase Azure DevOps testing capabilities
+The project showcases a complete software testing lifecycle from requirements gathering through test execution, defect reporting, retesting, and closure using industry-standard testing tools and methodologies.
 
 ---
 
-## Tools Used
+# Project Objectives
 
-| Tool             | Purpose                     |
-| ---------------- | --------------------------- |
-| Azure DevOps     | Test Management             |
-| Azure Boards     | Work Item Management        |
-| Azure Test Plans | Test Planning & Execution   |
-| GitHub           | Portfolio Hosting           |
-| Microsoft Excel  | Test Cases & Defect Reports |
-| Markdown         | Documentation               |
+This project was created to demonstrate practical experience in:
+
+* Azure DevOps Test Plans
+* Azure Boards
+* Test Suite Management
+* Test Case Design
+* Manual Test Execution
+* Jira Defect Management
+* Bug Lifecycle Management
+* Agile Testing Practices
+* Requirement Traceability
+* Software Quality Assurance
+
+---
+
+# Tools Used
+
+| Tool             | Purpose                   |
+| ---------------- | ------------------------- |
+| Azure DevOps     | Test Management           |
+| Azure Test Plans | Test Planning & Execution |
+| Azure Boards     | Work Item Tracking        |
+| Jira Software    | Defect Tracking           |
+| GitHub           | Portfolio Hosting         |
+| Microsoft Excel  | Test Cases & Bug Reports  |
+| Markdown         | Documentation             |
+| Postman          | API Testing               |
 
 ---
 
@@ -43,12 +49,15 @@ azure-devops-test-management/
 │
 ├── Documentation/
 │   ├── Azure_DevOps_Testing_Guide.pdf
+│   ├── Jira_Defect_Management_Guide.pdf
 │
 ├── Test-Cases/
-│   └── Login_Test_Cases.xlsx
+│   ├── Login_Test_Cases.xlsx
+│   ├── API_Test_Cases.xlsx
 │
 ├── Defect-Reports/
-│   └── Sample_Bug_Report.xlsx
+│   ├── Azure_DevOps_Bug_Report.xlsx
+│   ├── Jira_Bug_Report.xlsx
 │
 └── screenshots/
     ├── 01-project-created.png
@@ -57,10 +66,16 @@ azure-devops-test-management/
     ├── 04-test-case-created.png
     ├── 05-test-run-created.png
     ├── 06-test-results.png
-    ├── 07-bug-created.png
-    ├── 08-bug-details.png
+    ├── 07-devops-bug-created.png
+    ├── 08-devops-bug-details.png
     ├── 09-user-story-created.png
     ├── 10-traceability-matrix.png
+    ├── 11-jira-project-created.png
+    ├── 12-jira-backlog.png
+    ├── 13-jira-bug-created.png
+    ├── 14-jira-bug-details.png
+    ├── 15-jira-board.png
+    ├── 16-jira-workflow.png
 ```
 
 ---
@@ -69,36 +84,48 @@ azure-devops-test-management/
 
 A dedicated Azure DevOps project was created to manage testing activities.
 
-### Project Details
+## Project Configuration
 
-| Property         | Value            |
-| ---------------- | ---------------- |
-| Project Name     | API Testing Demo |
-| Process Template | Agile            |
-| Version Control  | Git              |
-| Visibility       | Private          |
+| Property        | Value            |
+| --------------- | ---------------- |
+| Project Name    | API Testing Demo |
+| Process         | Agile            |
+| Visibility      | Private          |
+| Version Control | Git              |
 
-### Screenshot
+## Activities Performed
 
-![Project Created](screenshots/01-project-created.png)
+* Created Azure DevOps project
+* Configured Agile process
+* Enabled Test Plans
+* Configured Azure Boards
+
+## Screenshot
+
+![Azure DevOps Project](screenshots/01-project-created.png)
 
 ---
 
-# Test Plan Creation
+# Azure Test Plan Creation
 
-A test plan was created to manage the overall testing effort.
+A test plan was created to organize testing activities.
 
-### Test Plan
+## Test Plan Name
 
 ```text
 ReqRes API Testing
 ```
 
-### Purpose
+## Purpose
 
-The test plan acts as a central container for all test suites, test cases, test runs, and test results.
+The test plan serves as the primary container for:
 
-### Screenshot
+* Test Suites
+* Test Cases
+* Test Runs
+* Test Results
+
+## Screenshot
 
 ![Test Plan](screenshots/02-test-plan-created.png)
 
@@ -106,24 +133,26 @@ The test plan acts as a central container for all test suites, test cases, test 
 
 # Test Suite Management
 
-Test Suites were created to logically organize test cases.
+Test Suites were created to organize test cases logically.
 
-### Test Suites
+## Test Suites Created
 
 ```text
 User Management APIs
+
 Positive Testing
+
 Negative Testing
 ```
 
-### Benefits
+## Benefits
 
 * Better organization
-* Easier reporting
-* Structured execution
-* Improved traceability
+* Easier maintenance
+* Improved reporting
+* Simplified execution
 
-### Screenshot
+## Screenshot
 
 ![Test Suite](screenshots/03-test-suite-created.png)
 
@@ -131,50 +160,51 @@ Negative Testing
 
 # Test Case Design
 
-Manual test cases were created and maintained within Azure DevOps.
+Manual test cases were designed and maintained within Azure DevOps.
 
 ## Sample Test Case
 
-### TC001 – Verify User List Retrieval
+### TC001 - Verify User List Retrieval
 
-#### Steps
+#### Test Steps
 
 1. Send GET request to /api/users?page=2
-2. Verify API response
-3. Verify status code
+2. Verify status code
+3. Verify user data returned
 
 #### Expected Result
 
 * Status Code = 200
-* User list returned successfully
+* User data returned successfully
 
 #### Actual Result
 
 * Status Code = 200
-* User list returned successfully
+* User data returned successfully
 
 #### Status
 
 Pass
 
-### Screenshot
+## Screenshot
 
 ![Test Case](screenshots/04-test-case-created.png)
 
 ---
 
-# Test Execution
+# Manual Test Execution
 
 Test cases were executed using Azure DevOps Test Plans.
 
-### Activities Performed
+## Activities Performed
 
-* Execute manual tests
-* Record Pass/Fail results
+* Execute test cases
+* Record Pass/Fail status
 * Capture execution evidence
 * Add execution comments
+* Retest defects
 
-### Screenshot
+## Screenshot
 
 ![Test Run](screenshots/05-test-run-created.png)
 
@@ -182,9 +212,9 @@ Test cases were executed using Azure DevOps Test Plans.
 
 # Test Results
 
-Test execution results were recorded and tracked.
+Execution results were recorded and tracked.
 
-## Execution Summary
+## Test Execution Summary
 
 | Metric           | Value |
 | ---------------- | ----- |
@@ -193,38 +223,46 @@ Test execution results were recorded and tracked.
 | Failed           | 2     |
 | Blocked          | 0     |
 
-### Screenshot
+## Screenshot
 
 ![Test Results](screenshots/06-test-results.png)
 
 ---
 
-# Defect Tracking
+# Azure DevOps Defect Tracking
 
-Defects identified during testing were logged in Azure DevOps Boards.
+Defects identified during testing were logged in Azure Boards.
 
-## Sample Defect
+## Sample Bug
 
 ### Bug ID
 
+```text
 BUG001
+```
 
 ### Title
 
+```text
 Login button not responding
+```
 
 ### Severity
 
+```text
 High
+```
 
 ### Priority
 
+```text
 High
+```
 
 ### Steps to Reproduce
 
 1. Open Login Page
-2. Enter valid credentials
+2. Enter credentials
 3. Click Login
 
 ### Expected Result
@@ -233,32 +271,33 @@ User successfully logs in.
 
 ### Actual Result
 
-No action occurs after clicking Login.
+No action occurs.
 
-### Screenshot
+## Screenshot
 
-![Bug Created](screenshots/07-bug-created.png)
+![Azure DevOps Bug](screenshots/07-devops-bug-created.png)
 
 ---
 
-# Defect Details
+# Bug Details
 
-Detailed bug information was maintained to assist developers with issue resolution.
+Detailed defect information was maintained to support issue resolution.
 
-### Information Captured
+## Information Captured
 
-* Title
+* Bug Title
 * Description
 * Reproduction Steps
-* Expected Result
-* Actual Result
 * Severity
 * Priority
+* Expected Result
+* Actual Result
 * Status
+* Assignee
 
-### Screenshot
+## Screenshot
 
-![Bug Details](screenshots/08-bug-details.png)
+![Bug Details](screenshots/08-devops-bug-details.png)
 
 ---
 
@@ -270,7 +309,9 @@ User Stories were created and linked with testing activities.
 
 ### Title
 
+```text
 User Login Functionality
+```
 
 ### Description
 
@@ -280,7 +321,7 @@ I want to log into the application
 
 So that I can access my account securely.
 
-### Screenshot
+## Screenshot
 
 ![User Story](screenshots/09-user-story-created.png)
 
@@ -288,64 +329,206 @@ So that I can access my account securely.
 
 # Requirement Traceability
 
-Requirement Traceability was maintained by linking:
+Requirements were linked to test cases and defects.
+
+## Traceability Flow
 
 ```text
 User Story
       ↓
 Test Case
       ↓
+Test Run
+      ↓
 Bug
+      ↓
+Retest
+      ↓
+Closed
 ```
 
-### Benefits
+## Benefits
 
 * Requirement coverage
 * Audit readiness
 * Impact analysis
-* Improved quality assurance
+* Better quality assurance
 
-### Screenshot
+## Screenshot
 
-![Traceability](screenshots/10-traceability-matrix.png)
-
----
-
-# Testing Activities Performed
-
-### Functional Testing
-
-Verification of application functionality against requirements.
-
-### Manual Testing
-
-Execution of predefined test cases.
-
-### Regression Testing
-
-Validation that existing functionality remained unaffected.
-
-### Defect Management
-
-Identification, logging, and tracking of defects.
-
-### Requirement Traceability
-
-Linking requirements with test cases and defects.
+![Traceability Matrix](screenshots/10-traceability-matrix.png)
 
 ---
 
-# Key Learnings
+# Jira Defect Management
 
-* Azure DevOps Test Plans
-* Test Suite Management
-* Test Case Design
-* Manual Test Execution
-* Defect Tracking
-* Azure Boards
-* Requirement Traceability
-* Agile Testing Practices
-* ISTQB Testing Techniques
+Jira Software was used to demonstrate defect management and Agile workflows.
+
+## Activities Performed
+
+* Created Jira Project
+* Managed Backlog
+* Created Bugs
+* Prioritized Defects
+* Managed Bug Lifecycle
+* Used Kanban Board
+
+## Screenshot
+
+![Jira Project](screenshots/11-jira-project-created.png)
+
+---
+
+# Jira Backlog Management
+
+The Jira backlog was used to manage testing-related activities.
+
+## Work Items
+
+* Stories
+* Tasks
+* Bugs
+* Testing Activities
+
+## Screenshot
+
+![Jira Backlog](screenshots/12-jira-backlog.png)
+
+---
+
+# Jira Defect Creation
+
+Defects were created and tracked through their lifecycle.
+
+## Sample Jira Defect
+
+### Bug ID
+
+```text
+BUG-101
+```
+
+### Title
+
+```text
+Login button not responding
+```
+
+### Priority
+
+```text
+Highest
+```
+
+### Severity
+
+```text
+High
+```
+
+### Status
+
+```text
+Open
+```
+
+## Screenshot
+
+![Jira Bug](screenshots/13-jira-bug-created.png)
+
+---
+
+# Jira Bug Details
+
+Detailed bug information was maintained.
+
+## Information Recorded
+
+* Summary
+* Description
+* Environment
+* Steps to Reproduce
+* Expected Result
+* Actual Result
+* Priority
+* Severity
+* Status
+
+## Screenshot
+
+![Jira Bug Details](screenshots/14-jira-bug-details.png)
+
+---
+
+# Jira Agile Board
+
+Kanban board used for tracking defect progress.
+
+## Workflow Stages
+
+```text
+To Do
+ ↓
+In Progress
+ ↓
+Testing
+ ↓
+Done
+```
+
+## Screenshot
+
+![Jira Board](screenshots/15-jira-board.png)
+
+---
+
+# Jira Defect Lifecycle
+
+Defects were tracked from creation through closure.
+
+## Lifecycle
+
+```text
+Open
+ ↓
+In Progress
+ ↓
+Ready for Testing
+ ↓
+Closed
+```
+
+## Screenshot
+
+![Jira Workflow](screenshots/16-jira-workflow.png)
+
+---
+
+# End-to-End Testing Workflow
+
+```text
+Requirement
+      ↓
+Azure DevOps User Story
+      ↓
+Test Plan
+      ↓
+Test Suite
+      ↓
+Test Case
+      ↓
+Test Execution
+      ↓
+Defect Identification
+      ↓
+Jira Bug Creation
+      ↓
+Developer Fix
+      ↓
+Retesting
+      ↓
+Closure
+```
 
 ---
 
@@ -354,14 +537,32 @@ Linking requirements with test cases and defects.
 * Azure DevOps
 * Azure Test Plans
 * Azure Boards
+* Jira Software
 * Manual Testing
-* Test Management
 * Test Case Design
+* Test Execution
 * Defect Tracking
 * Bug Lifecycle Management
-* Agile Methodology
 * Requirement Traceability
-* Quality Assurance
+* Agile Methodology
+* Kanban
+* Scrum
+* Software Quality Assurance
+* ISTQB Testing Practices
+
+---
+
+# Key Learnings
+
+* Test Planning and Management
+* Test Suite Organization
+* Manual Test Execution
+* Defect Reporting
+* Azure DevOps Boards
+* Jira Defect Management
+* Requirement Traceability
+* Agile Testing Processes
+* Software Quality Assurance Best Practices
 
 ---
 
@@ -369,10 +570,10 @@ Linking requirements with test cases and defects.
 
 **Mrigakshi Gogoi**
 
-Certifications:
+### Certifications
 
 * Microsoft Certified: Azure Fundamentals (AZ-900)
 * Microsoft Certified: Azure Administrator Associate (AZ-104)
 * ISTQB Certified Tester Foundation Level (CTFL)
 
-This repository was created to demonstrate practical experience with Azure DevOps Test Management and Software Quality Assurance practices.
+This repository was created to demonstrate practical experience in Azure DevOps Test Management, Jira Defect Tracking, Agile Testing, and Software Quality Assurance processes.
