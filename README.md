@@ -160,7 +160,7 @@ The test plan serves as the primary container for:
 
 ## Screenshot
 
-![Test Plan](screenshots/02-test-plan-created.png)
+![Test Plan](screenshots/04-test-plan-created.png)
 
 ---
 
