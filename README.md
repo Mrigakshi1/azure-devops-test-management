@@ -261,239 +261,96 @@ Evidence:
 ![Test Case](screenshots/04-test-case-executed-test01-azure.png)
 
 ---
+## Test Execution – Verify Invalid Credentials
 
+### Test Case ID
 
-# Azure DevOps & Jira Test Management Portfolio
+TC002
 
-## Repository Description
+### Test Case Name
 
-This repository demonstrates hands-on experience with Azure DevOps Test Plans, Azure Boards, Jira Defect Management, Test Case Design, Manual Test Execution, Defect Tracking, Agile Testing, and Requirement Traceability.
+Verify Invalid Credentials
 
-The project showcases a complete software testing lifecycle from requirements gathering through test execution, defect reporting, retesting, and closure using industry-standard testing tools and methodologies.
+### Objective
 
----
+Verify that the login API rejects invalid user credentials and returns an appropriate error response.
 
-# Project Objectives
+### Tool Used
 
-This project was created to demonstrate practical experience in:
-
+* Postman
 * Azure DevOps Test Plans
-* Azure Boards
-* Test Suite Management
-* Test Case Design
-* Manual Test Execution
-* Jira Defect Management
-* Bug Lifecycle Management
-* Agile Testing Practices
-* Requirement Traceability
-* Software Quality Assurance
 
----
+### API Endpoint
 
-# Tools Used
-
-| Tool             | Purpose                   |
-| ---------------- | ------------------------- |
-| Azure DevOps     | Test Management           |
-| Azure Test Plans | Test Planning & Execution |
-| Azure Boards     | Work Item Tracking        |
-| Jira Software    | Defect Tracking           |
-| GitHub           | Portfolio Hosting         |
-| Microsoft Excel  | Test Cases & Bug Reports  |
-| Markdown         | Documentation             |
-| Postman          | API Testing               |
-
----
-
-# Project Structure
-
-```text
-azure-devops-test-management/
-│
-├── README.md
-│
-├── Documentation/
-│   ├── Azure_DevOps_Testing_Guide.pdf
-│   ├── Jira_Defect_Management_Guide.pdf
-│
-├── Test-Cases/
-│   ├── Login_Test_Cases.xlsx
-│   ├── API_Test_Cases.xlsx
-│
-├── Defect-Reports/
-│   ├── Azure_DevOps_Bug_Report.xlsx
-│   ├── Jira_Bug_Report.xlsx
-│
-└── screenshots/
-    ├── 01-project-created.png
-    ├── 02-test-plan-created.png
-    ├── 03-test-suite-created.png
-    ├── 04-test-case-created.png
-    ├── 05-test-run-created.png
-    ├── 06-test-results.png
-    ├── 07-devops-bug-created.png
-    ├── 08-devops-bug-details.png
-    ├── 09-user-story-created.png
-    ├── 10-traceability-matrix.png
-    ├── 11-jira-project-created.png
-    ├── 12-jira-backlog.png
-    ├── 13-jira-bug-created.png
-    ├── 14-jira-bug-details.png
-    ├── 15-jira-board.png
-    ├── 16-jira-workflow.png
+```http
+POST https://reqres.in/api/login
 ```
 
----
+### Request Headers
 
-# Azure DevOps Project Setup
-
-A dedicated Azure DevOps project was created to manage testing activities.
-
-## Project Configuration
-
-| Property        | Value            |
-| --------------- | ---------------- |
-| Project Name    | API Testing Demo |
-| Process         | Agile            |
-| Visibility      | Private          |
-| Version Control | Git              |
-
-## Activities Performed
-
-* Created Azure DevOps project
-* Configured Agile process
-* Enabled Test Plans
-* Configured Azure Boards
-
-## Screenshot
-
-![Azure DevOps Project](screenshots/01-project-created.png)
-
----
-
-# Azure Test Plan Creation
-
-A test plan was created to organize testing activities.
-
-## Test Plan Name
-
-```text
-ReqRes API Testing
+```http
+x-api-key: --
+Content-Type: application/json
 ```
 
-## Purpose
+### Test Data
 
-The test plan serves as the primary container for:
+#### Request Payload
 
-* Test Suites
-* Test Cases
-* Test Runs
-* Test Results
-
-## Screenshot
-
-![Test Plan](screenshots/02-test-plan-created.png)
-
----
-
-# Test Suite Management
-
-Test Suites were created to organize test cases logically.
-
-## Test Suites Created
-
-```text
-User Management APIs
-
-Positive Testing
-
-Negative Testing
+```json
+{
+  "email": "invalid@test.com",
+  "password": "wrongpassword"
+}
 ```
 
-## Benefits
+### Test Steps
 
-* Better organization
-* Easier maintenance
-* Improved reporting
-* Simplified execution
+| Step | Action                            | Expected Result                       |
+| ---- | --------------------------------- | ------------------------------------- |
+| 1    | Open ReqRes Login API endpoint    | Endpoint is accessible                |
+| 2    | Send POST request to `/api/login` | Request is accepted by the server     |
+| 3    | Enter invalid email address       | Email is processed                    |
+| 4    | Enter invalid password            | Password is processed                 |
+| 5    | Submit the request                | Login attempt is rejected             |
+| 6    | Verify response                   | Appropriate error message is returned |
 
-## Screenshot
+### Expected Result
 
-![Test Suite](screenshots/03-test-suite-created.png)
+* Status Code = 400 Bad Request
+* Error message is returned
+* Authentication token is not generated
 
----
+### Actual Result
 
-# Test Case Design
+* Status Code = 400 Bad Request
+* Error response returned by API
+* Authentication token was not generated
 
-Manual test cases were designed and maintained within Azure DevOps.
+### Outcome
 
-## Sample Test Case
+**PASS**
 
-### TC001 - Verify User List Retrieval
+The API correctly rejected invalid credentials and returned an appropriate error response, matching the expected behavior.
 
-#### Test Steps
+### Evidence
 
-1. Send GET request to /api/users?page=2
-2. Verify status code
-3. Verify user data returned
+#### Postman Execution
 
-#### Expected Result
+![Test Case](screenshots/07-invalid-credentials-response.png)
 
-* Status Code = 200
-* User data returned successfully
+#### Azure Test Plans Execution
+![Test Case](screenshots/08-invalid-credentials-test-executed.png)
 
-#### Actual Result
+### Key Learning
 
-* Status Code = 200
-* User data returned successfully
-
-#### Status
-
-Pass
-
-## Screenshot
-
-![Test Case](screenshots/04-test-case-created.png)
-
----
-
-# Manual Test Execution
-
-Test cases were executed using Azure DevOps Test Plans.
-
-## Activities Performed
-
-* Execute test cases
-* Record Pass/Fail status
-* Capture execution evidence
-* Add execution comments
-* Retest defects
-
-## Screenshot
-
-![Test Run](screenshots/05-test-run-created.png)
+* Negative API testing
+* Error handling validation
+* Response verification
+* Authentication failure testing
+* Azure DevOps Test Execution
 
 ---
-
-# Test Results
-
-Execution results were recorded and tracked.
-
-## Test Execution Summary
-
-| Metric           | Value |
-| ---------------- | ----- |
-| Total Test Cases | 10    |
-| Passed           | 8     |
-| Failed           | 2     |
-| Blocked          | 0     |
-
-## Screenshot
-
-![Test Results](screenshots/06-test-results.png)
-
----
-
 # Azure DevOps Defect Tracking
 
 Defects identified during testing were logged in Azure Boards.
