@@ -224,6 +224,41 @@ Pass
 
 ![Test Case](screenshots/04-test-case-created-test01.png)
 
+### Test Execution – Verify Successful Login
+
+Tool Used:
+Postman
+
+API Endpoint:
+POST https://reqres.in/api/login
+
+Request Payload:
+
+{
+"email": "[eve.holt@reqres.in](mailto:eve.holt@reqres.in)",
+"password": "cityslicka"
+}
+
+Expected Result:
+
+* Status Code = 200
+* Authentication token returned
+
+Actual Result:
+
+* Status Code = 200
+* Token successfully returned
+
+Outcome:
+PASS
+
+Evidence:
+
+* Postman execution screenshot
+* Azure Test Plans execution result
+
+![Test Case](screenshots/04-test-case-executed-test01.png)
+
 ---
 
 # Manual Test Execution
