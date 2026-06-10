@@ -600,10 +600,6 @@ In Progress
 
 ↓
 
-In Review
-
-↓
-
 Done
 
 ### Outcome
@@ -635,8 +631,6 @@ Kanban board used for tracking defect progress.
 To Do
  ↓
 In Progress
- ↓
-Testing
  ↓
 Done
 ```
