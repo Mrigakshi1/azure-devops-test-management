@@ -648,13 +648,15 @@ Defects were tracked from creation through closure.
 ## Lifecycle
 
 ```text
-Open
- ↓
+To Do
+
+↓
+
 In Progress
- ↓
-Ready for Testing
- ↓
-Closed
+
+↓
+
+Done
 ```
 
 ## Screenshot
