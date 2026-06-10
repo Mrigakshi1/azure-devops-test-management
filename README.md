@@ -1107,14 +1107,3 @@ Closure
 
 ---
 
-# Author
-
-**Mrigakshi Gogoi**
-
-### Certifications
-
-* Microsoft Certified: Azure Fundamentals (AZ-900)
-* Microsoft Certified: Azure Administrator Associate (AZ-104)
-* ISTQB Certified Tester Foundation Level (CTFL)
-
-This repository was created to demonstrate practical experience in Azure DevOps Test Management, Jira Defect Tracking, Agile Testing, and Software Quality Assurance processes.
